@@ -1,0 +1,29 @@
+= Markmenu - Simple jQuery Plugin to mark menu with classes
+
+This plugin is very simple to use
+Here have a example app using the markmenu.
+Basically, you need online tell where you links stay and markmenu do the rest.
+
+If you has the menu marked with the follow html:
+
+    <ul id="top_menu">
+        <li>
+            <a href="/home" id="home">Home</a>
+        <li>
+
+        <li>
+            <a href="/projects/details.php" id="projects">Projects</a>
+        <li>
+
+        <li>
+            <a href="/about" id="about">About</a>
+        <li>
+
+    </ul
+
+So, you need just call the markmenu:
+
+    $("top_menu").markmenu();
+
+To see other examples look at the code into repository
+

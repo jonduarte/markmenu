@@ -1,6 +1,6 @@
 Markmenu - simple jQuery plugin to mark menu
 ============================================
-
+ 
 Markmenu é um simples plugin para formatação de links em menus
 baseado na url que o usuário está visitando, ex:
 Se o usuário está visitando a pagina /contato, então no menu que possui um link

@@ -5,12 +5,12 @@ Eg: If you the user is accessing http:www/yoursite.com/products and you
 want to highlight the link `Products` from menu, you can achieve this
 easily with markmenu.
 
-Getting Started:
+## Getting Started:
 
 1. Add the property `data-mark` to each link you want to customize:
 2. Call jQuery plugin
 
-## 1 - Add property data-mark
+### 1 - Add property data-mark
 
 ```html
 <ul id="top_menu">
@@ -38,7 +38,7 @@ You can change data-mark to whateve value you want, eg:
 
 Will add class to Home link when url match with `lupalumpas`
 
-## 2 - Call jquery plugin
+### 2 - Call jquery plugin
 
 You need just:
 

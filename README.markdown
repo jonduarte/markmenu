@@ -1,31 +1,58 @@
-Markmenu - simple jQuery plugin to mark menu
-============================================
- 
-Markmenu é um simples plugin para formatação de links em menus
-baseado na url que o usuário está visitando, ex:
-Se o usuário está visitando a pagina /contato, então no menu que possui um link
-para /contato automaticamente ficará com uma classe especial destacando-o.
-Se você possuir um html parecido com o seguinte:
+# Markmenu - simple jQuery plugin to mark menu
 
-    <ul id="top_menu">
-       <li>
-           <a href="/home" id="home">Home</a>
-       <li>
-       <li>
-           <a href="/projects/details.php" id="projects">Projects</a>
-       <li>
-       <li>
-           <a href="/about" id="about">About</a>
-       <li>
-   </ul>
+Markmenu simple way to mark links of a menu based on url.
+Eg: If you the user is accessing http:www/yoursite.com/products and you
+want to highlight the link `Products` from menu, you can achieve this
+easily with markmenu.
 
-Para fazer o markmenu funcionar e deixar seus links de maneira destacadas basta:
+Getting Started:
 
-   $("#top_menu").markmenu();
+1. Add the property `data-mark` to each link you want to customize:
+2. Call jQuery plugin
 
-Por padrão o markmenu() irá acrescentar uma classe chamada .marked ao link. Se você achar nescessário
-você pode altera-la da seguinte maneira:
-	 
-	 $("#top_menu").markmenu({class : "myCustomClass" });
-   
+## 1 - Add property data-mark
 
+```html
+<ul id="top_menu">
+  <li><a href="/home" data-mark="home">Home</a><li>
+  <li><a href="/projects" data-mark="projects">Projects</a><li>
+  <li><a href="/about" data-mark="about">About</a><li>
+</ul>
+```
+
+What goes happen:
+
+When the url be:
+
+`/home` - Will add a css class to Home link
+`/projects` - Will add a css class to Projects link
+`/about` - Will add a css class to About link
+
+You can change data-mark to whateve value you want, eg:
+
+```html
+<ul id="menu">
+  <li><a href="/home" data-mark="lupalumpas">Home</a><li>
+</ul>
+```
+
+Will add class to Home link when url match with `lupalumpas`
+
+## 2 - Call jquery plugin
+
+You need just:
+
+```javascript
+$("#top_menu").markmenu();
+```
+
+## Bonus
+
+Customizing link class:
+
+The default css class added to links is: `marked`, but you can override
+this with:
+
+```javascript
+$("#top_menu").markmenu({class : "myCustomClass" });
+```

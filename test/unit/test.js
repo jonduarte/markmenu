@@ -6,6 +6,13 @@ $(document).ready(function(){
   });
 
   module("Locations");
+  test("is index", function(){
+    ok(MarkMenu.Locations.isIndex("", "/"));
+    ok(MarkMenu.Locations.isIndex("/", ""));
+    ok(MarkMenu.Locations.isIndex("", ""));
+    ok(MarkMenu.Locations.isIndex("", "/"));
+  });
+
   test("can retrieve location", function() {
     MarkMenu.Locations.url("/bar");
     result = MarkMenu.Locations.url();
